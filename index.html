@@ -5,30 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shaima Al-Khuzaee | Full-Stack Developer</title>
   <meta name="description" content="Full-Stack Developer building efficient, scalable, and user-centered solutions." />
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --main: #AA60C8;
+      --secondary: #D69ADE;
+      --highlight: #EABDE6;
+      --background: #FFDFEF;
+    }
+    body {
+      background-color: var(--background);
+      color: #2D1B33;
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      color: var(--main);
+    }
+    a {
+      color: var(--main);
+      transition: 0.3s;
+    }
+    a:hover {
+      color: var(--secondary);
+    }
+    .card {
+      background-color: var(--highlight);
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn-primary {
+      background-color: var(--main);
+      color: white;
+      border-radius: 0.75rem;
+      padding: 0.75rem 1.5rem;
+    }
+    .btn-primary:hover {
+      background-color: var(--secondary);
+    }
+  </style>
 </head>
-<body class="bg-gray-950 text-gray-100">
+
+<body class="max-w-5xl mx-auto px-6 py-10">
+
   <!-- Hero -->
-  <header class="max-w-4xl mx-auto px-6 py-16 text-center">
-    <h1 class="text-4xl font-bold mb-3">Hi, I'm Shaima 👋</h1>
-    <p class="text-lg opacity-90">
-      Full-Stack Developer skilled in Laravel, PHP, SQL, and Swift. I build efficient, scalable, and user-centered solutions.
+  <header class="text-center py-16">
+    <h1 class="text-4xl font-bold mb-4">Hi, I'm Shaima 👋</h1>
+    <p class="text-lg mb-6">
+      Full-Stack Developer skilled in Laravel, PHP, SQL, and Swift.  
+      I build efficient, scalable, and user-centered solutions.
     </p>
-    <div class="mt-6 flex items-center justify-center gap-4">
-      <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-lg">View Projects</a>
-      <a href="#contact" class="border border-gray-700 hover:bg-gray-900 px-5 py-3 rounded-lg">Contact</a>
+    <div class="flex justify-center gap-4">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="border border-[color:var(--main)] text-[color:var(--main)] px-6 py-3 rounded-xl hover:bg-[color:var(--highlight)]">Contact</a>
     </div>
   </header>
 
   <!-- Skills -->
-  <section class="max-w-4xl mx-auto px-6 py-10">
-    <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-    <div class="grid sm:grid-cols-2 gap-4">
-      <div class="p-5 rounded-xl bg-gray-900">
+  <section class="py-10">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Skills</h2>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="card">
         <h3 class="font-semibold mb-2">Languages & Frameworks</h3>
         <p>PHP, Swift, JavaScript, C#, SQL, Java — Laravel, SwiftUI, Unity</p>
       </div>
-      <div class="p-5 rounded-xl bg-gray-900">
+      <div class="card">
         <h3 class="font-semibold mb-2">Databases & Tools</h3>
         <p>MySQL, PostgreSQL, Oracle APEX — Xcode, Visual Studio, Postman</p>
       </div>
@@ -36,53 +80,44 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="max-w-4xl mx-auto px-6 py-10">
-    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-    <div class="grid sm:grid-cols-2 gap-4">
-      <article class="p-5 rounded-xl bg-gray-900">
-        <h3 class="font-semibold">Batal (Graduation Project)</h3>
-        <p class="opacity-90 text-sm mt-1">
-          Gamified mobile app for kids (5–9) to build positive habits. Built with Unity & C#, MySQL. Awarded 3rd place in the Scientific Poster Competition.
-        </p>
-      </article>
-      <article class="p-5 rounded-xl bg-gray-900">
-        <h3 class="font-semibold">Batal iOS (Swift Rebuild)</h3>
-        <p class="opacity-90 text-sm mt-1">
-          Rebuilt with SwiftUI & Xcode, improved UI/animations, and local data storage for smooth performance.
-        </p>
-      </article>
-      <article class="p-5 rounded-xl bg-gray-900">
-        <h3 class="font-semibold">AwonTech Website</h3>
-        <p class="opacity-90 text-sm mt-1">
-          Responsive corporate site with secure Laravel backend, auth, and optimized SQL performance.
-        </p>
-      </article>
+  <section id="projects" class="py-10">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="card">
+        <h3 class="font-semibold mb-2">Batal (Graduation Project)</h3>
+        <p>Gamified mobile app for kids (5–9) to build positive habits. Built with Unity & C#, MySQL. Awarded 3rd place in the Scientific Poster Competition.</p>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">Batal iOS (Swift Rebuild)</h3>
+        <p>Rebuilt with SwiftUI & Xcode, improved UI/animations, and local data storage for smooth performance.</p>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">AwonTech Website</h3>
+        <p>Responsive corporate site with secure Laravel backend, auth, and optimized SQL performance.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Education & Certification -->
-  <section class="max-w-4xl mx-auto px-6 py-10">
-    <h2 class="text-2xl font-semibold mb-4">Education & Certification</h2>
-    <ul class="space-y-2 opacity-95">
+  <!-- Education -->
+  <section class="py-10">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Education & Certification</h2>
+    <ul class="space-y-2 text-center">
       <li><strong>B.Sc. in Computer Science</strong> — College of Computing, Makkah (Aug 2021 – Feb 2025), Second-Class Honors.</li>
       <li><strong>Oracle APEX Cloud Developer Professional (1Z0-771)</strong> — 2025.</li>
     </ul>
   </section>
 
   <!-- Contact -->
-  <footer id="contact" class="border-t border-gray-800">
-    <div class="max-w-4xl mx-auto px-6 py-10">
-      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-      <p class="opacity-90">Makkah, Saudi Arabia</p>
-      <p class="opacity-90">
-        Email:
-        <a class="text-blue-400 underline" href="mailto:Shaimakhpp@gmail.com">Shaimakhpp@gmail.com</a>
-      </p>
-      <p class="opacity-90">
-        LinkedIn:
-        <a class="text-blue-400 underline" href="https://linkedin.com/in/shaima-al-Khuzaee">linkedin.com/in/shaima-al-Khuzaee</a>
-      </p>
-    </div>
+  <footer id="contact" class="text-center py-10 border-t border-[color:var(--secondary)]">
+    <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+    <p>Makkah, Saudi Arabia</p>
+    <p>
+      Email: <a href="mailto:Shaimakhpp@gmail.com">Shaimakhpp@gmail.com</a>
+    </p>
+    <p>
+      LinkedIn: <a href="https://linkedin.com/in/shaima-al-Khuzaee">linkedin.com/in/shaima-al-Khuzaee</a>
+    </p>
   </footer>
+
 </body>
 </html>

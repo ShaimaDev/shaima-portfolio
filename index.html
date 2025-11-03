@@ -6,23 +6,20 @@
   <title>Shaima Al-Khuzaee | Full-Stack & Game Developer</title>
   <meta name="description" content="Portfolio of Shaima Al-Khuzaee — Full-Stack & Game Developer. Laravel, Swift, Unity, SQL." />
 
-  <!-- Comfort-first design: soft palette, ample whitespace, readable type -->
   <style>
-    /* ========= THEME ========= */
     :root{
-      --c-main:#AA60C8;      /* primary */
-      --c-2:#D69ADE;         /* secondary */
-      --c-3:#EABDE6;         /* card */
-      --c-bg:#FFDFEF;        /* page background */
-      --c-ink:#2B2030;       /* body text (comfortable dark) */
-      --c-ink-soft:#4b3a53;  /* softer text */
+      --c-main:#AA60C8;
+      --c-2:#D69ADE;
+      --c-3:#EABDE6;
+      --c-bg:#FFDFEF;
+      --c-ink:#2B2030;
+      --c-ink-soft:#4b3a53;
       --radius:16px;
       --shadow:0 10px 30px rgba(42,16,51,.08);
       --space-1:10px; --space-2:16px; --space-3:24px; --space-4:36px; --space-5:56px;
       --maxw: 1040px;
     }
 
-    /* ========= BASE ========= */
     html { box-sizing: border-box; }
     *, *::before, *::after { box-sizing: inherit; }
     body{
@@ -33,18 +30,14 @@
       line-height: 1.7;
       letter-spacing: 0.2px;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
     a{ color: var(--c-main); text-decoration: none; }
     a:hover{ text-decoration: underline; }
     img{ max-width: 100%; display:block; }
-
-    /* ========= LAYOUT ========= */
     .container{ max-width: var(--maxw); margin: 0 auto; padding: 0 var(--space-3); }
     section{ padding: var(--space-5) 0; }
     .stack > * + *{ margin-top: var(--space-3); }
 
-    /* ========= NAV / HEADER ========= */
     .topbar{
       position: sticky; top: 0; z-index: 10;
       backdrop-filter: blur(6px);
@@ -59,7 +52,6 @@
     .nav a{ color: var(--c-ink); opacity:.8; padding:6px 10px; border-radius:10px; }
     .nav a:hover{ background: color-mix(in srgb, var(--c-3) 55%, white); opacity:1; text-decoration:none; }
 
-    /* ========= HERO ========= */
     .hero{
       margin-top: var(--space-5);
       background: linear-gradient(135deg, color-mix(in srgb, var(--c-3) 60%, white) 0%, color-mix(in srgb, var(--c-2) 35%, white) 100%);
@@ -81,7 +73,6 @@
     .btn.ghost{ border-color: var(--c-main); color: var(--c-main); background: #fff; }
     .btn.ghost:hover{ background: color-mix(in srgb, var(--c-3) 55%, white); text-decoration:none; }
 
-    /* ========= SECTIONS ========= */
     .section-title{
       font-size: clamp(22px, 3vw, 30px);
       margin:0 0 var(--space-3);
@@ -106,7 +97,6 @@
     .list li{ background: #fff; border: 1px solid color-mix(in srgb, var(--c-3) 60%, #eee);
       border-radius: 12px; padding: 10px 12px; }
 
-    /* ========= FOOTER ========= */
     footer{
       border-top: 1px solid color-mix(in srgb, var(--c-2) 35%, white);
       padding: var(--space-4) 0 var(--space-5);
@@ -115,7 +105,6 @@
       margin-top: var(--space-4);
     }
 
-    /* ========= ACCESSIBILITY / MOTION ========= */
     :focus-visible{ outline: 3px solid color-mix(in srgb, var(--c-main) 70%, #000); outline-offset: 2px; border-radius: 8px; }
     @media (prefers-reduced-motion: reduce){
       *{ animation: none!important; transition: none!important; scroll-behavior: auto!important; }
@@ -124,12 +113,8 @@
 </head>
 <body>
 
-  <!-- Skip link for accessibility -->
-  <a href="#content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
-    Skip to content
-  </a>
+  <a href="#content" style="position:absolute;left:-9999px;">Skip to content</a>
 
-  <!-- NAV -->
   <header class="topbar">
     <div class="container nav">
       <div class="brand">Shaima Al-Khuzaee</div>
@@ -137,37 +122,37 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="content" class="container">
-    <!-- HERO -->
+
     <section class="hero">
       <h1>Full-Stack & Game Developer</h1>
       <p class="lead">
-       Hello, World.  I build efficient, scalable, and user-centered solutions using Laravel, PHP, Swift, Unity, and SQL.
-        3rd-place winner at the <strong>GameOn Hackathon</strong> with <em>Jamal</em>.
+        Computer Science graduate and Full-Stack Developer with experience in backend and game development.
+        Skilled in Laravel, SwiftUI, Unity, and SQL. Recognized for creativity and teamwork — 3rd place in the GameOn Hackathon and winner of the Scientific Poster Competition.
       </p>
       <div class="actions">
         <a class="btn primary" href="#projects">View Projects</a>
         <a class="btn ghost" href="#contact">Contact</a>
+        <a class="btn ghost" href="Shaima_Resume.pdf" download>Download CV</a>
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
       <h2 class="section-title">About</h2>
       <div class="stack">
         <p class="muted" style="max-width:760px;margin:0 auto;">
-          Computer Science graduate and Full-Stack Developer focused on clean code, performance, and user experience.
-          Comfortable across backend and mobile, with hands-on work in Laravel, SwiftUI, Unity, and SQL.
+          A passionate developer focused on clean code, performance, and user experience.
+          Comfortable across backend, mobile, and game development, with hands-on experience in Laravel, SwiftUI, Unity, and SQL.
         </p>
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
       <h2 class="section-title">Skills</h2>
       <div class="grid">
@@ -181,59 +166,71 @@
         </div>
         <div class="card">
           <h3>Core</h3>
-          <p class="muted">RESTful APIs, Responsive Design, Debugging & Testing, Agile, Collaboration</p>
+          <p class="muted">RESTful APIs, Generative AI, Responsive Design, Debugging & Testing, Agile, Collaboration</p>
         </div>
       </div>
     </section>
 
-  <!-- PROJECTS -->
-<section id="projects">
-  <h2 class="section-title">Projects & Game Development</h2>
-  <div class="grid">
-    <article class="card">
-      <h3>Batal (Graduation Project- بطل)</h3>
-      <p class="muted">
-        Gamified mobile app for kids (5–9) to build positive habits. Built with Unity & C#, MySQL.
-        Awarded 3rd place in the Scientific Poster Competition.
-      </p>
-    </article>
+    <section id="projects">
+      <h2 class="section-title">Projects & Game Development</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Batal (Graduation Project - بطل)</h3>
+          <p class="muted">
+            Gamified mobile app for kids (5–9) to build positive habits. Built with Unity & C#, MySQL.
+            Awarded 3rd place in the Scientific Poster Competition.
+          </p>
+        </article>
 
-    <article class="card">
-      <h3>Batal iOS (بطل) (Swift Rebuild)</h3>
-      <p class="muted">
-        Rebuilt with SwiftUI & Xcode, with improved UI, animations, and local storage for smooth performance.
-      </p>
-    </article>
+        <article class="card">
+          <h3>Batal iOS (Swift Rebuild)</h3>
+          <p class="muted">
+            Rebuilt with SwiftUI & Xcode, with improved UI, animations, and local storage for smooth performance.
+          </p>
+        </article>
 
-    <article class="card">
-      <h3>AwonTech Website (عون للتقنية)</h3>
-      <p class="muted">
-        Responsive corporate website with secure Laravel backend, authentication, and optimized SQL performance.
-      </p>
-    </article>
+        <article class="card">
+          <h3>AwonTech Website (عون للتقنية)</h3>
+          <p class="muted">
+            Responsive corporate website with secure Laravel backend, authentication, and optimized SQL performance.
+          </p>
+        </article>
 
-    <article class="card">
-      <h3> Jamal (جمل) — GameOn Hackathon (3rd Place)</h3>
-      <p class="muted">
-        A creative game showcasing interactive storytelling and engaging gameplay.
-        <br />
-        <a href="https://jamalteam.itch.io/jamal" target="_blank" rel="noopener">Play the game on Itch.io</a>
-      </p>
-    </article>
-  </div>
-</section>
+        <article class="card">
+          <h3>Jamal — GameOn Hackathon (3rd Place)</h3>
+          <p class="muted">
+            A creative game showcasing interactive storytelling and engaging gameplay.
+            <br />
+            <a href="https://jamalteam.itch.io/jamal" target="_blank" rel="noopener">Play the game on Itch.io</a>
+          </p>
+        </article>
+      </div>
+    </section>
 
-
-    <!-- EDUCATION -->
     <section id="education">
-      <h2 class="section-title">Education & Certification</h2>
+      <h2 class="section-title">Education</h2>
       <ul class="list">
         <li><strong>B.Sc. in Computer Science</strong> — College of Computing, Makkah (Aug 2021 – Feb 2025), Second-Class Honors.</li>
-        <li><strong>Oracle APEX Cloud Developer Professional (1Z0-771)</strong> — 2025.</li>
       </ul>
     </section>
 
-    <!-- CONTACT -->
+    <section id="certifications">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="list">
+        <li>Oracle APEX Cloud Developer Certified Professional</li>
+        <li>Generative AI: Foundation Models and Platforms</li>
+        <li>Generative AI: Impact, Considerations, and Ethical Issues</li>
+        <li>Generative AI: Introduction and Applications</li>
+        <li>Generative AI: Prompt Engineering Basics</li>
+        <li>Laravel Web Development</li>
+        <li>Intermediate SQL & Database Management</li>
+        <li>الدليل الشامل لتصميم الألعاب</li>
+        <li>Introduction to iOS Mobile Application Development</li>
+        <li>Version Control</li>
+        <li>Joining Data in SQL</li>
+      </ul>
+    </section>
+
     <section id="contact">
       <h2 class="section-title">Contact</h2>
       <div class="grid">

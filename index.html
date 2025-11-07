@@ -66,12 +66,12 @@
     .actions{ margin-top: var(--space-3); display:flex; gap:12px; justify-content:center; flex-wrap: wrap; }
     .btn{
       display:inline-block; padding: 12px 18px; border-radius: 12px; border: 1px solid transparent;
-      font-weight:600; letter-spacing:.2px;
+      font-weight:600; letter-spacing:.2px; transition: all .2s ease-in-out;
     }
     .btn.primary{ background: var(--c-main); color: #fff; }
-    .btn.primary:hover{ background: color-mix(in srgb, var(--c-main) 85%, black); text-decoration:none; }
+    .btn.primary:hover{ background: color-mix(in srgb, var(--c-main) 85%, black); transform: scale(1.03); text-decoration:none; }
     .btn.ghost{ border-color: var(--c-main); color: var(--c-main); background: #fff; }
-    .btn.ghost:hover{ background: color-mix(in srgb, var(--c-3) 55%, white); text-decoration:none; }
+    .btn.ghost:hover{ background: color-mix(in srgb, var(--c-3) 55%, white); transform: scale(1.03); text-decoration:none; }
 
     .section-title{
       font-size: clamp(22px, 3vw, 30px);
@@ -89,6 +89,11 @@
       border-radius: var(--radius);
       padding: var(--space-3);
       box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(42,16,51,.12);
     }
     .card h3{ margin:0 0 6px; font-size: 18px; color: var(--c-main); }
     .muted{ color: var(--c-ink-soft); }
@@ -122,7 +127,6 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#reports">Reports</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -172,55 +176,61 @@
       </div>
     </section>
 
+    <!-- Updated Projects Section -->
     <section id="projects">
       <h2 class="section-title">Projects & Game Development</h2>
       <div class="grid">
+
         <article class="card">
           <h3>Batal (Graduation Project - بطل)</h3>
-          <p class="muted">Gamified mobile app for kids (5–9) to build positive habits. Built with Unity & C#, MySQL. Awarded 3rd place in the Scientific Poster Competition.</p>
+          <p class="muted">
+            Gamified mobile app for kids (5–9) to build positive habits. Built with Unity & C#, MySQL. 
+            Awarded 3rd place in the Scientific Poster Competition.
+          </p>
+          <div class="actions" style="justify-content:flex-start;">
+            <a class="btn primary" href="BVN Poster.pdf" target="_blank">📄 View Poster</a>
+          </div>
         </article>
+
         <article class="card">
           <h3>Batal iOS (Swift Rebuild)</h3>
-          <p class="muted">Rebuilt with SwiftUI & Xcode, with improved UI, animations, and local storage for smooth performance.</p>
+          <p class="muted">
+            Rebuilt with SwiftUI & Xcode, with improved UI, animations, and local storage for smooth performance.
+          </p>
         </article>
+
         <article class="card">
           <h3>AwonTech Website (عون للتقنية)</h3>
-          <p class="muted">Responsive corporate website with secure Laravel backend, authentication, and optimized SQL performance.</p>
+          <p class="muted">
+            Responsive corporate website with secure Laravel backend, authentication, and optimized SQL performance.
+          </p>
+          <div class="actions" style="justify-content:flex-start; flex-wrap:wrap; gap:10px;">
+            <a class="btn primary" href="تحدي عون.pdf" target="_blank">📄 View Challenge</a>
+            <a class="btn ghost" href="عرض عون النهائي .pdf" target="_blank">📊 Final Presentation</a>
+          </div>
         </article>
+
+        <article class="card">
+          <h3>Balsam Platform (Software Engineering Project)</h3>
+          <p class="muted">
+            A healthcare platform connecting sellers, donors, and patients for easier access to medical devices.
+            Built collaboratively in Software Engineering 2 course. 
+          </p>
+          <div class="actions" style="justify-content:flex-start;">
+            <a class="btn primary" href="SE project 2.pdf" target="_blank">📄 View Report</a>
+          </div>
+        </article>
+
         <article class="card">
           <h3>Jamal — GameOn Hackathon (3rd Place)</h3>
-          <p class="muted">A creative game showcasing interactive storytelling and engaging gameplay. <br /><a href="https://jamalteam.itch.io/jamal" target="_blank" rel="noopener">Play the game on Itch.io</a></p>
-        </article>
-      </div>
-    </section>
-
-    <!-- New Section for Reports & Presentations -->
-    <section id="reports">
-      <h2 class="section-title">Reports & Presentations</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>BVN Poster</h3>
-          <p class="muted">ملف عرض مشروع بطل — تعزيز القيم الإيجابية للأطفال عبر تطبيق تفاعلي.</p>
-          <a class="btn primary" href="BVN Poster.pdf" target="_blank">عرض الملف</a>
+          <p class="muted">
+            A creative game showcasing interactive storytelling and engaging gameplay.
+          </p>
+          <div class="actions" style="justify-content:flex-start;">
+            <a class="btn primary" href="https://jamalteam.itch.io/jamal" target="_blank" rel="noopener">🔗 Play on Itch.io</a>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>تحدي عون</h3>
-          <p class="muted">عرض تقديمي لنظام عون وإدارة المستخدمين (Admin / Super Admin).</p>
-          <a class="btn primary" href="تحدي عون.pdf" target="_blank">عرض الملف</a>
-        </article>
-
-        <article class="card">
-          <h3>عرض عون النهائي</h3>
-          <p class="muted">العرض النهائي لموقع عون للتقنية — مشروع التدريب العملي.</p>
-          <a class="btn primary" href="عرض عون النهائي .pdf" target="_blank">عرض الملف</a>
-        </article>
-
-        <article class="card">
-          <h3>Balsam (SE Project 2)</h3>
-          <p class="muted">مشروع هندسة البرمجيات 2 — منصة للرعاية الصحية والأجهزة الطبية.</p>
-          <a class="btn primary" href="SE project 2.pdf" target="_blank">عرض الملف</a>
-        </article>
       </div>
     </section>
 

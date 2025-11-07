@@ -108,14 +108,9 @@
     }
 
     :focus-visible{ outline: 3px solid color-mix(in srgb, var(--c-main) 70%, #000); outline-offset: 2px; border-radius: 8px; }
-    @media (prefers-reduced-motion: reduce){
-      *{ animation: none!important; transition: none!important; scroll-behavior: auto!important; }
-    }
   </style>
 </head>
 <body>
-
-  <a href="#content" style="position:absolute;left:-9999px;">Skip to content</a>
 
   <header class="topbar">
     <div class="container nav">
@@ -145,35 +140,6 @@
       </div>
     </section>
 
-    <section id="about">
-      <h2 class="section-title">About</h2>
-      <div class="stack">
-        <p class="muted" style="max-width:760px;margin:0 auto;">
-          A passionate developer focused on clean code, performance, and user experience.
-          Comfortable across backend, mobile, and game development, with hands-on experience in Laravel, SwiftUI, Unity, and SQL.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Languages & Frameworks</h3>
-          <p class="muted">PHP, Swift, JavaScript, C#, SQL, Java — Laravel, SwiftUI, Unity</p>
-        </div>
-        <div class="card">
-          <h3>Databases & Tools</h3>
-          <p class="muted">MySQL, PostgreSQL, Oracle APEX — Xcode, Visual Studio, Postman</p>
-        </div>
-        <div class="card">
-          <h3>Core</h3>
-          <p class="muted">RESTful APIs, Generative AI, Responsive Design, Debugging & Testing, Agile, Collaboration</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
     <section id="projects">
       <h2 class="section-title">Projects & Game Development</h2>
       <div class="grid">
@@ -185,15 +151,8 @@
             Awarded 3rd place in the Scientific Poster Competition.
           </p>
           <div class="actions" style="justify-content:flex-start;">
-            <a class="btn primary" href="BVN Poster.pdf" target="_blank">📄 View Poster</a>
+            <a class="btn primary" href="BVN%20Poster.pdf" target="_blank">📄 View Poster</a>
           </div>
-        </article>
-
-        <article class="card">
-          <h3>Batal iOS (Swift Rebuild)</h3>
-          <p class="muted">
-            Rebuilt with SwiftUI & Xcode, with improved UI, animations, and local storage for smooth performance.
-          </p>
         </article>
 
         <article class="card">
@@ -202,10 +161,8 @@
             Responsive corporate website with secure Laravel backend, authentication, and optimized SQL performance.
           </p>
           <div class="actions" style="justify-content:flex-start; flex-wrap:wrap; gap:10px;">
-            <a class="btn primary" href="تحدي عون.pdf" target="_blank">📄 Challenge File</a>
-          <a class="btn ghost" href="https://shaimadev.github.io/shaima-portfolio/AwonFinal.pdf" target="_blank">📊 Final Presentation</a>
-
-
+            <a class="btn primary" href="https://shaimadev.github.io/shaima-portfolio/%D8%AA%D8%AD%D8%AF%D9%8A%20%D8%B9%D9%88%D9%86.pdf" target="_blank">📄 Challenge File</a>
+            <a class="btn ghost" href="https://shaimadev.github.io/shaima-portfolio/AwonFinal.pdf" target="_blank">📊 Final Presentation</a>
           </div>
         </article>
 
@@ -213,10 +170,9 @@
           <h3>Balsam Platform (Software Engineering Project)</h3>
           <p class="muted">
             A healthcare platform connecting sellers, donors, and patients for easier access to medical devices.
-            Built collaboratively in Software Engineering 2 course. 
           </p>
           <div class="actions" style="justify-content:flex-start;">
-            <a class="btn primary" href="SE project 2.pdf" target="_blank">📄 View Report</a>
+            <a class="btn primary" href="SE%20project%202.pdf" target="_blank">📄 View Report</a>
           </div>
         </article>
 
@@ -243,49 +199,14 @@
       </div>
     </section>
 
-    <section id="education">
-      <h2 class="section-title">Education</h2>
-      <ul class="list">
-        <li><strong>B.Sc. in Computer Science</strong> — College of Computing, Makkah (Aug 2021 – Feb 2025), Second-Class Honors.</li>
-      </ul>
-    </section>
+    <footer>
+      <small>© <span id="y"></span> Shaima Al-Khuzaee • صُمم بشغف، حب، وإبداع ✨</small>
+    </footer>
 
-    <section id="certifications">
-      <h2 class="section-title">Certifications</h2>
-      <ul class="list">
-        <li>Oracle APEX Cloud Developer Certified Professional</li>
-        <li>Generative AI: Foundation Models and Platforms</li>
-        <li>Generative AI: Impact, Considerations, and Ethical Issues</li>
-        <li>Generative AI: Introduction and Applications</li>
-        <li>Generative AI: Prompt Engineering Basics</li>
-        <li>Laravel Web Development</li>
-        <li>Intermediate SQL & Database Management</li>
-        <li>الدليل الشامل لتصميم الألعاب</li>
-        <li>Introduction to iOS Mobile Application Development</li>
-        <li>Version Control</li>
-        <li>Joining Data in SQL</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2 class="section-title">Contact</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Get in touch</h3>
-          <p class="muted">
-            Makkah, Saudi Arabia<br/>
-            Email: <a href="mailto:Shaimakhpp@gmail.com">Shaimakhpp@gmail.com</a><br/>
-            LinkedIn: <a href="https://linkedin.com/in/shaima-al-Khuzaee" target="_blank" rel="noopener">linkedin.com/in/shaima-al-Khuzaee</a>
-          </p>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer>
-    <small>© <span id="y"></span> Shaima Al-Khuzaee • صُمم بشغف، حب، وإبداع ✨</small>
-  </footer>
-
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

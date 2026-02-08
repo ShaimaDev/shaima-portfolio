@@ -23,7 +23,7 @@
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: linear-gradient(180deg, var(--c-bg), #fff);
+      background: linear-gradient(180deg, var(--c-bg) 0%, #fff 40%, #fff 100%);
       color: var(--c-ink);
       line-height:1.7;
     }
@@ -37,7 +37,7 @@
     .topbar{
       position:sticky; top:0; z-index:10;
       backdrop-filter:blur(6px);
-      background:color-mix(in srgb, var(--c-bg) 80%, white);
+      background:color-mix(in srgb, var(--c-bg) 78%, white);
       border-bottom:1px solid color-mix(in srgb, var(--c-2) 35%, white);
     }
 
@@ -51,7 +51,7 @@
       margin-top:var(--space-5);
       padding:var(--space-5);
       text-align:center;
-      background:linear-gradient(135deg, var(--c-3), var(--c-2));
+      background:linear-gradient(135deg, color-mix(in srgb, var(--c-3) 60%, white), color-mix(in srgb, var(--c-2) 35%, white));
       border-radius:24px;
       box-shadow:var(--shadow);
     }
@@ -69,10 +69,14 @@
       border-radius:12px;
       font-weight:600;
       border:1px solid transparent;
+      transition: all .2s ease-in-out;
     }
 
     .btn.primary{ background:var(--c-main); color:#fff; }
+    .btn.primary:hover{ background: color-mix(in srgb, var(--c-main) 85%, black); transform: scale(1.03); text-decoration:none; }
+
     .btn.ghost{ background:#fff; border-color:var(--c-main); color:var(--c-main); }
+    .btn.ghost:hover{ background: color-mix(in srgb, var(--c-3) 55%, white); transform: scale(1.03); text-decoration:none; }
 
     .section-title{ text-align:center; color:var(--c-main); margin-bottom:var(--space-3); }
 
@@ -87,6 +91,12 @@
       border-radius:var(--radius);
       padding:var(--space-3);
       box-shadow:var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(42,16,51,.12);
     }
 
     .card h3{ margin-top:0; color:var(--c-main); }
@@ -98,6 +108,7 @@
       background:linear-gradient(180deg, #fff, var(--c-bg));
       color:var(--c-ink-soft);
     }
+
   </style>
 </head>
 
@@ -107,6 +118,7 @@
   <div class="container nav">
     <div class="brand">Shaima Al-Khuzaee</div>
     <nav>
+      <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#certifications">Certifications</a>
@@ -121,8 +133,8 @@
   <section class="hero">
     <h1>Full-Stack & Game Developer</h1>
     <p class="lead">
-      Computer Science graduate with experience in Laravel, SwiftUI, Unity, and SQL.
-      Oracle APEX Cloud Developer Certified. Passionate about building impactful digital solutions.
+      Computer Science graduate and Full-Stack Developer with experience in backend and game development.
+      Skilled in Laravel, SwiftUI, Unity, and SQL. Recognized for creativity and teamwork — 3rd place in the GameOn Hackathon and winner of the Scientific Poster Competition.
     </p>
     <div class="actions">
       <a class="btn primary" href="#projects">View Projects</a>
@@ -136,9 +148,9 @@
     <h2 class="section-title">Skills</h2>
     <div class="grid">
       <div class="card"><h3>Programming Languages</h3><p class="muted">PHP, Swift, JavaScript, C#, SQL, Java</p></div>
-      <div class="card"><h3>Frameworks & Tools</h3><p class="muted">Laravel, SwiftUI, Unity, Xcode, Postman</p></div>
+      <div class="card"><h3>Frameworks & Tools</h3><p class="muted">Laravel, SwiftUI, Unity, Xcode, Visual Studio, Postman</p></div>
       <div class="card"><h3>Databases</h3><p class="muted">MySQL, PostgreSQL, Oracle APEX</p></div>
-      <div class="card"><h3>Core Skills</h3><p class="muted">REST APIs, UI/UX, Debugging, Agile, Team Collaboration</p></div>
+      <div class="card"><h3>Core Skills</h3><p class="muted">Debugging & Testing, Agile Development, Problem Solving, Team Collaboration, RESTful APIs, UI/UX</p></div>
     </div>
   </section>
 
@@ -147,54 +159,62 @@
     <h2 class="section-title">Projects & Game Development</h2>
     <div class="grid">
 
-      <div class="card">
-        <h3>Batal (Graduation Project)</h3>
+      <article class="card">
+        <h3>Batal (Graduation Project - بطل)</h3>
         <p class="muted">
-          Gamified mobile app for kids (5–9) to build positive habits.
-          Built with Unity & C#, MySQL backend.
-          Awarded 3rd place in the Scientific Poster Competition.
+          Gamified mobile app for kids (5–9) to build positive habits. Built with Unity & C#, MySQL.
         </p>
-      </div>
+        <div class="actions" style="justify-content:flex-start;">
+          <a class="btn primary" href="BVN%20Poster.pdf" target="_blank">📄 View Poster</a>
+        </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Batal iOS (Swift Rebuild)</h3>
         <p class="muted">
-          Rebuilt using SwiftUI & Xcode with improved UI, animations,
-          and optimized local storage for smooth performance.
+          Rebuilt with SwiftUI & Xcode, with improved UI, animations, and local storage for smooth performance.
         </p>
-      </div>
+      </article>
 
-      <div class="card">
-        <h3>AwonTech Website</h3>
+      <article class="card">
+        <h3>AwonTech Website (عون للتقنية)</h3>
         <p class="muted">
-          Responsive corporate website built with Laravel.
-          Implemented authentication, database optimization, and API integration.
+          Responsive corporate website with secure Laravel backend, authentication, and optimized SQL performance.
         </p>
-      </div>
+        <div class="actions" style="justify-content:flex-start; flex-wrap:wrap; gap:10px;">
+          <a class="btn primary" href="https://shaimadev.github.io/shaima-portfolio/%D8%AA%D8%AD%D8%AF%D9%8A%20%D8%B9%D9%88%D9%86.pdf" target="_blank">📄 Challenge File</a>
+        </div>
+      </article>
 
-      <div class="card">
-        <h3>Balsam Platform</h3>
+      <article class="card">
+        <h3>Balsam Platform (Software Engineering Project)</h3>
         <p class="muted">
-          Software Engineering project — healthcare platform connecting sellers,
-          donors, and patients to access medical devices efficiently.
+          A healthcare platform connecting sellers, donors, and patients for easier access to medical devices.
         </p>
-      </div>
+        <div class="actions" style="justify-content:flex-start;">
+          <a class="btn primary" href="SE%20project%202.pdf" target="_blank">📄 View Report</a>
+        </div>
+      </article>
 
-      <div class="card">
-        <h3>UQU Library UI/UX Design</h3>
+      <article class="card">
+        <h3>UQU Library (UI/UX Design Project)</h3>
         <p class="muted">
-          UI/UX design project created in Figma to enhance usability
-          and accessibility of the university library website.
+          A user interface and experience design for the UQU Library website — designed in Figma to enhance usability and accessibility.
         </p>
-      </div>
+        <div class="actions" style="justify-content:flex-start;">
+          <a class="btn primary" href="https://www.figma.com/design/zY3B5xCXLS5uVvd2ofKF3f/web-project?node-id=0-1&p=f&t=g5YRDLIB9MtxN0AC-0" target="_blank" rel="noopener">🔗 View Design</a>
+        </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Jamal — GameOn Hackathon (3rd Place)</h3>
         <p class="muted">
-          Interactive storytelling game developed during the GameOn Hackathon,
-          focusing on creativity and engaging gameplay.
+          A creative game showcasing interactive storytelling and engaging gameplay.
         </p>
-      </div>
+        <div class="actions" style="justify-content:flex-start;">
+          <a class="btn primary" href="https://jamalteam.itch.io/jamal" target="_blank" rel="noopener">🔗 Play on Itch.io</a>
+        </div>
+      </article>
 
     </div>
   </section>
@@ -213,8 +233,8 @@
   <section id="contact">
     <h2 class="section-title">Contact</h2>
     <div class="grid">
-      <div class="card"><h3>Email</h3><p class="muted">Shaimakhpp@gmail.com</p></div>
-      <div class="card"><h3>LinkedIn</h3><p class="muted">linkedin.com/in/shaima-al-khuzaee</p></div>
+      <div class="card"><h3>Email</h3><p class="muted"><a href="mailto:Shaimakhpp@gmail.com">Shaimakhpp@gmail.com</a></p></div>
+      <div class="card"><h3>LinkedIn</h3><p class="muted"><a href="https://www.linkedin.com/in/shaima-al-khuzaee" target="_blank">linkedin.com/in/shaima-al-khuzaee</a></p></div>
       <div class="card"><h3>Location</h3><p class="muted">Makkah, Saudi Arabia</p></div>
     </div>
   </section>

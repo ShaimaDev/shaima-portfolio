@@ -20,23 +20,19 @@
       --maxw: 1040px;
     }
 
-    html { box-sizing: border-box; }
-    *, *::before, *::after { box-sizing: inherit; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       background: linear-gradient(180deg, var(--c-bg) 0%, #fff 40%, #fff 100%);
       color: var(--c-ink);
       line-height: 1.7;
-      letter-spacing: 0.2px;
-      -webkit-font-smoothing: antialiased;
     }
+
     a{ color: var(--c-main); text-decoration: none; }
     a:hover{ text-decoration: underline; }
-    img{ max-width: 100%; display:block; }
+
     .container{ max-width: var(--maxw); margin: 0 auto; padding: 0 var(--space-3); }
     section{ padding: var(--space-5) 0; }
-    .stack > * + *{ margin-top: var(--space-3); }
 
     .topbar{
       position: sticky; top: 0; z-index: 10;
@@ -44,175 +40,169 @@
       background: color-mix(in srgb, var(--c-bg) 78%, white);
       border-bottom: 1px solid color-mix(in srgb, var(--c-2) 35%, white);
     }
+
     .nav{
       display:flex; align-items:center; justify-content:space-between;
       height: 64px;
     }
-    .brand{ font-weight: 700; letter-spacing:.3px; color: var(--c-main); }
-    .nav a{ color: var(--c-ink); opacity:.8; padding:6px 10px; border-radius:10px; }
-    .nav a:hover{ background: color-mix(in srgb, var(--c-3) 55%, white); opacity:1; text-decoration:none; }
+
+    .brand{ font-weight:700; color: var(--c-main); }
+
+    .nav a{
+      color: var(--c-ink);
+      padding:6px 10px;
+      border-radius:10px;
+    }
+
+    .nav a:hover{
+      background: color-mix(in srgb, var(--c-3) 55%, white);
+      text-decoration:none;
+    }
 
     .hero{
       margin-top: var(--space-5);
-      background: linear-gradient(135deg, color-mix(in srgb, var(--c-3) 60%, white) 0%, color-mix(in srgb, var(--c-2) 35%, white) 100%);
-      border: 1px solid color-mix(in srgb, var(--c-2) 35%, white);
-      box-shadow: var(--shadow);
-      border-radius: calc(var(--radius) + 8px);
+      background: linear-gradient(135deg, var(--c-3), var(--c-2));
+      border-radius: 24px;
       padding: var(--space-5);
-      text-align: center;
+      text-align:center;
+      box-shadow: var(--shadow);
     }
-    .hero h1{ font-size: clamp(28px, 4vw, 40px); margin: 0 0 var(--space-2); color: var(--c-main); }
-    .lead{ max-width: 720px; margin: 0 auto; color: var(--c-ink-soft); }
-    .actions{ margin-top: var(--space-3); display:flex; gap:12px; justify-content:center; flex-wrap: wrap; }
+
+    .hero h1{ color: var(--c-main); }
+
+    .lead{ max-width:720px; margin:0 auto; color: var(--c-ink-soft); }
+
+    .actions{
+      margin-top: var(--space-3);
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
     .btn{
-      display:inline-block; padding: 12px 18px; border-radius: 12px; border: 1px solid transparent;
-      font-weight:600; letter-spacing:.2px; transition: all .2s ease-in-out;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:600;
+      border:1px solid transparent;
     }
-    .btn.primary{ background: var(--c-main); color: #fff; }
-    .btn.primary:hover{ background: color-mix(in srgb, var(--c-main) 85%, black); transform: scale(1.03); text-decoration:none; }
-    .btn.ghost{ border-color: var(--c-main); color: var(--c-main); background: #fff; }
-    .btn.ghost:hover{ background: color-mix(in srgb, var(--c-3) 55%, white); transform: scale(1.03); text-decoration:none; }
+
+    .btn.primary{ background: var(--c-main); color:#fff; }
+    .btn.ghost{ border-color: var(--c-main); color: var(--c-main); background:#fff; }
 
     .section-title{
-      font-size: clamp(22px, 3vw, 30px);
-      margin:0 0 var(--space-3);
-      text-align:center; color: var(--c-main);
+      text-align:center;
+      color: var(--c-main);
+      margin-bottom: var(--space-3);
     }
 
     .grid{
-      display:grid; gap: var(--space-3);
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      display:grid;
+      gap: var(--space-3);
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
     }
+
     .card{
       background: color-mix(in srgb, var(--c-3) 70%, white);
-      border: 1px solid color-mix(in srgb, var(--c-2) 25%, white);
       border-radius: var(--radius);
       padding: var(--space-3);
       box-shadow: var(--shadow);
-      transition: transform .25s ease, box-shadow .25s ease;
     }
-    .card:hover{
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(42,16,51,.12);
-    }
-    .card h3{ margin:0 0 6px; font-size: 18px; color: var(--c-main); }
+
+    .card h3{ color: var(--c-main); margin-top:0; }
+
     .muted{ color: var(--c-ink-soft); }
 
-   footer{
-  position: relative;
-  border-top: 1px solid color-mix(in srgb, var(--c-2) 35%, white);
-  padding: var(--space-4) 0 var(--space-5);
-  color: var(--c-ink-soft);
-  background: linear-gradient(180deg, #fff 0%, var(--c-bg) 100%);
-  text-align:center;
-  margin-top: var(--space-4);
-  box-shadow: 0 -8px 40px rgba(170, 96, 200, 0.3);
-}
-
+    footer{
+      text-align:center;
+      padding: var(--space-4);
+      color: var(--c-ink-soft);
+      background: linear-gradient(180deg, #fff, var(--c-bg));
+    }
   </style>
 </head>
+
 <body>
 
-  <header class="topbar">
-    <div class="container nav">
-      <div class="brand">Shaima Al-Khuzaee</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">Shaima Al-Khuzaee</div>
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Full-Stack & Game Developer</h1>
+    <p class="lead">
+      Computer Science graduate with experience in Laravel, SwiftUI, Unity, and SQL.
+      Oracle APEX Cloud Developer Certified. Passionate about building impactful and scalable digital solutions.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn ghost" href="#contact">Contact</a>
+      <a class="btn ghost" href="Shaima's%20CVC.pdf" download>Download CV</a>
     </div>
-  </header>
+  </section>
 
-  <main id="content" class="container">
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Programming</h3><p class="muted">PHP, Swift, JavaScript, C#, SQL, Java</p></div>
+      <div class="card"><h3>Frameworks & Tools</h3><p class="muted">Laravel, SwiftUI, Unity, Xcode, Postman</p></div>
+      <div class="card"><h3>Databases</h3><p class="muted">MySQL, PostgreSQL, Oracle APEX</p></div>
+      <div class="card"><h3>Core Skills</h3><p class="muted">REST APIs, UI/UX, Debugging, Agile, Teamwork</p></div>
+    </div>
+  </section>
 
-    <section class="hero">
-      <h1>Full-Stack & Game Developer</h1>
-      <p class="lead">
-        Computer Science graduate and Full-Stack Developer with experience in backend and game development.
-        Skilled in Laravel, SwiftUI, Unity, and SQL. Recognized for creativity and teamwork — 3rd place in the GameOn Hackathon and winner of the Scientific Poster Competition.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn ghost" href="#contact">Contact</a>
-        <a class="btn ghost" href="Shaima's%20CVC.pdf" download>Download CV</a>
-      </div>
-    </section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>Batal (Graduation Project)</h3><p class="muted">Gamified kids app built with Unity & MySQL.</p></div>
+      <div class="card"><h3>Batal iOS</h3><p class="muted">SwiftUI rebuild with animations & performance improvements.</p></div>
+      <div class="card"><h3>AwonTech Website</h3><p class="muted">Laravel backend, authentication & SQL optimization.</p></div>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2 class="section-title">Projects & Game Development</h2>
-      <div class="grid">
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="grid">
+      <div class="card"><h3>Oracle APEX Cloud Developer Professional</h3><p class="muted">Oracle • 2025</p></div>
+      <div class="card"><h3>Introduction to AI (40h)</h3><p class="muted">KAUST Academy • 2026</p></div>
+      <div class="card"><h3>Generative AI</h3><p class="muted">IBM • 2025</p></div>
+    </div>
+  </section>
 
-        <article class="card">
-          <h3>Batal (Graduation Project - بطل)</h3>
-          <p class="muted">
-            Gamified mobile app for kids (5–9) to build positive habits. Built with Unity & C#, MySQL.
-          </p>
-          <div class="actions" style="justify-content:flex-start;">
-            <a class="btn primary" href="BVN%20Poster.pdf" target="_blank">📄 View Poster</a>
-          </div>
-        </article>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="grid">
+      <div class="card"><h3>Email</h3><p class="muted">Shaimakhpp@gmail.com</p></div>
+      <div class="card"><h3>Phone</h3><p class="muted">+966 53 181 4546</p></div>
+      <div class="card"><h3>LinkedIn</h3><p class="muted">linkedin.com/in/shaima-al-khuzaee</p></div>
+      <div class="card"><h3>Location</h3><p class="muted">Makkah, Saudi Arabia</p></div>
+    </div>
+  </section>
 
-        <article class="card">
-          <h3>Batal iOS (Swift Rebuild)</h3>
-          <p class="muted">
-            Rebuilt with SwiftUI & Xcode, with improved UI, animations, and local storage for smooth performance.
-          </p>
-        </article>
+</main>
 
-        <article class="card">
-          <h3>AwonTech Website (عون للتقنية)</h3>
-          <p class="muted">
-            Responsive corporate website with secure Laravel backend, authentication, and optimized SQL performance.
-          </p>
-          <div class="actions" style="justify-content:flex-start; flex-wrap:wrap; gap:10px;">
-            <a class="btn primary" href="https://shaimadev.github.io/shaima-portfolio/%D8%AA%D8%AD%D8%AF%D9%8A%20%D8%B9%D9%88%D9%86.pdf" target="_blank">📄 Challenge File</a>
-          </div>
-        </article>
+<footer>
+  © <span id="y"></span> Shaima Al-Khuzaee • Designed with passion ✨
+</footer>
 
-        <article class="card">
-          <h3>Balsam Platform (Software Engineering Project)</h3>
-          <p class="muted">
-            A healthcare platform connecting sellers, donors, and patients for easier access to medical devices.
-          </p>
-          <div class="actions" style="justify-content:flex-start;">
-            <a class="btn primary" href="SE%20project%202.pdf" target="_blank">📄 View Report</a>
-          </div>
-        </article>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 
-        <article class="card">
-          <h3>UQU Library (UI/UX Design Project)</h3>
-          <p class="muted">
-            A user interface and experience design for the UQU Library website — designed in Figma to enhance usability and accessibility.
-          </p>
-          <div class="actions" style="justify-content:flex-start;">
-            <a class="btn primary" href="https://www.figma.com/design/zY3B5xCXLS5uVvd2ofKF3f/web-project?node-id=0-1&p=f&t=g5YRDLIB9MtxN0AC-0" target="_blank" rel="noopener">🔗 View Design</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Jamal — GameOn Hackathon (3rd Place)</h3>
-          <p class="muted">
-            A creative game showcasing interactive storytelling and engaging gameplay.
-          </p>
-          <div class="actions" style="justify-content:flex-start;">
-            <a class="btn primary" href="https://jamalteam.itch.io/jamal" target="_blank" rel="noopener">🔗 Play on Itch.io</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <footer>
-      <small>© <span id="y"></span> Shaima Al-Khuzaee • صُمم بشغف، حب، وإبداع ✨</small>
-    </footer>
-
-  </main>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
